@@ -1,0 +1,27 @@
+<template name="generalLayout">
+  {{>head}}
+  <body class="hold-transition skin-blue sidebar-mini">
+    <div class="wrapper">
+
+      {{>header}}
+  
+      {{>sideBar}}
+
+     
+      <div class="content-wrapper">
+      
+        {{>contentHeader}}
+      
+        {{> yield}}
+      </div>
+      {{>footer}}
+  
+     {{>controlSideBar}}
+    </div>
+
+   
+    <script>
+      $.widget.bridge('uibutton', $.ui.button);
+    </script>
+  </body>
+</template>

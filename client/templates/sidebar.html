@@ -1,0 +1,28 @@
+    <template name="sideBar">
+    
+      <aside class="main-sidebar">
+      
+        <section class="sidebar">
+        
+          <ul class="sidebar-menu">
+         
+           
+            <li class="active treeview">
+              <a href="#">
+                <i class="fa fa-sitemap"></i> <span>Devices</span>
+                <i class="fa fa-angle-left pull-right"></i>
+              </a>
+              <ul class="treeview-menu">
+              {{#each tasks}}
+              <li><a id={{_id}} class="add_tab" href='#' data-deviceid={{_id}}><i class="fa fa-usb"></i> {{prod_name}}</a>   </li>
+              {{/each}}
+ 
+
+              </ul>
+            </li>
+            
+          </ul>
+        </section>
+      
+      </aside>
+    </template>

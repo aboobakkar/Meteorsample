@@ -1,0 +1,81 @@
+<template name="dashboard">
+     
+        <section class="content">
+         <div class="row">
+              {{>statBoxes}}
+          </div>
+       
+
+          <div class="row">
+         <div id="tabs" style="padding: 0px;border-radius: 0px;" >
+                               
+                               <ul  style="border-radius: 0px;border: 0px">
+
+ 
+  </ul>
+  <div id="tabs-1">
+
+       <div class="nav-tabs-custom">
+
+              
+          <ul id="menu" class="nav nav-tabs pull-left">
+            <li class="active"><a style="font-size: 12px" id="infoTab"  data-toggle="tab">Device Info</a></li>
+            <li><a style="font-size: 12px" id="relayTab"  data-toggle="tab">Relay Status/Control</a></li>
+            <li><a style="font-size: 12px" id="tablegpioTab" class="tablegpioTab" data-toggle="tab">GPIO Status/Control</a></li>
+                  
+          </ul>
+              
+
+ 
+<div id="info">
+
+ 
+ <div class="row">
+            <div class="col-xs-12">
+              <div class="box">
+                <div class="box-header">
+               
+                </div>
+                <div class="box-body">
+                {{#each tabcontent}}
+                  <table  class="table table-bordered table-striped">
+                   
+                    <tbody>
+
+         <tr style="font-size: 12px"><td  width="200px">Port:</td> <td >{{port}}</td> </tr>
+       
+         <tr style="font-size: 12px"><td>Vendor ID:</td> <td >{{vendorID}} </td> </tr>
+         <tr style="font-size: 12px"><td>Product ID:</td> <td style="font-size: 12px"> {{productID}}</td> </tr>
+         <tr style="font-size: 12px"><td>Manufacturer:</td> <td style="font-size: 12px"> {{manufacturer}}</td> </tr>
+
+       
+
+                     
+                    </tbody>
+            
+                  </table>
+                    {{/each}}
+                </div>
+              </div>
+            </div>
+          </div>
+        
+           
+
+
+</div>
+            <div id="relay" style="display: none;">
+             {{>dataTablesPageRelay}}
+            </div>
+
+           <div id="tablegpio"  style="display: none;">
+            {{>dataTablesPage}}
+            </div>
+            </div>
+            </div>
+
+ </div>
+</div>
+
+        </section>
+      </template>

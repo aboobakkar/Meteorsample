@@ -1,0 +1,12 @@
+.No_device
+{
+  text-align: center;
+ /* padding: 5.5em 1.4em;*/
+  color: #0076c8;
+  font: 15px Tahoma, Helvetica, Arial, Sans-Serif;
+  /*text-shadow:0px 2px 3px #0076c8;*/
+  border-width: 0;
+  
+  
+}
+.alignCenter { text-align: center; }
